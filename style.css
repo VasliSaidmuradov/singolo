@@ -1,0 +1,263 @@
+@font-face {
+  font-family: "Lato";
+  src: url("./assets/fonts/Lato-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("./assets/fonts/Lato-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("./assets/fonts/Lato-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("./assets/fonts/Lato-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+body {
+  font-family: 'Lato';
+  /* overflow-x: hidden; */
+}
+
+:root {
+  --main-color: #f06c64;
+  --ligh-bg: #f2f2f2;
+  --title-color: #666d89;
+  --text-color: #767e9e;
+}
+
+.container {
+  width: 938px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #2d303a;
+  height: 89px;
+  border-bottom: 6px solid #323746;
+}
+
+header .header {
+  height: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .header .logo {
+  position: relative;
+  cursor: pointer;
+}
+
+header .header .logo .logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+header .header .logo .logo-asterisk {
+  position: absolute;
+  top: -5px;
+  font-size: 24px;
+  color: var(--main-color);
+}
+
+header .nav .menu-list {
+  list-style: none;
+  display: flex;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+header .nav .menu-list .menu-item {
+  font-size: 12px;
+  font-family: 'Lato';
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  padding-left: 28px;
+  position: relative;
+  transition: .2s ease-in-out;
+}
+
+header .nav .menu-list .menu-item::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 13px;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: #555;
+}
+
+header .nav .menu-list .menu-item:hover {
+  color: var(--main-color);
+}
+
+header .nav .menu-list .menu-item:first-child {
+  padding-left: 0;
+}
+
+header .nav .menu-list .menu-item:first-child:before {
+  content: none;
+}
+
+
+/* section slider */
+.slider {
+  height: 600px;
+  background-color: var(--main-color);
+  border-bottom: 6px solid #ea676b;
+}
+
+.slider .container {
+  height: 100%;
+  position: relative;
+}
+
+.slider-image {
+  position: absolute;
+}
+.slider-image-vertical {
+  top: 52px;
+  left: 70px;
+}
+.slider-image-horizontal {
+  top: 175px;
+  right: 70px;
+}
+
+.slider .container .slider-prev,
+.slider .container .slider-next {
+  position: absolute;
+  top: 49%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 27px;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+.slider .container .slider-prev {
+  background: url("./assets/img/chev-left.png") center/cover;
+  left: 0;
+}
+
+.slider .container .slider-next {
+  background: url("./assets/img/chev-right.png") center/cover;
+  right: 0;
+}
+
+.slider .container .slider-prev:hover {
+  opacity: .75;
+  left: -5px;
+}
+
+.slider .container .slider-next:hover {
+  opacity: .75;
+  right: -5px;
+}
+
+
+/* section services */
+
+.services {
+  height: 496px;
+  background-color: var(--ligh-bg);
+  border-bottom: 6px solid #fff;
+  color: var(--text-color);
+  padding-top: 53px;
+  box-sizing: border-box;
+}
+
+.services .section-title {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--title-color);
+  margin-bottom: 18px;
+}
+
+.services .section-text {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.services .service-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 45px;
+}
+
+.services .service-list .service-item {
+  width: 312px;
+  height: 122px;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.services .service-list .service-item:nth-child(2),
+.services .service-list .service-item:nth-child(5) {
+  padding-left: 7px;
+}
+
+.services .service-list .service-item:nth-child(3),
+.services .service-list .service-item:nth-child(6) {
+  padding-left: 15px;
+}
+
+.services .service-list .service-item .icon {
+  width: 59px;
+  height: 59px;
+  border: 2px solid var(--title-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-top: 3px;
+}
+
+.services .service-list .service-item .content {
+  box-sizing: border-box;
+  width: calc(100% - 59px);
+  padding-left: 22px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.services .service-list .service-item .content-title {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 900;
+  color: var(--title-color);
+  margin-bottom: 10px;
+}
+
+.services .service-list .service-item .content-text {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--title-color);
+}
