@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Singolo</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+  <section class="portfolio">
+    <div class="container">
+      <h1 class="section-title">Portfolio</h1>
+      <p class="section-text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
+        elit.
+      </p>
+      <div class="portfolio-filter">
+        <div class="portfolio-filter-item active" data-tags="all" onclick="addClass(this), filterByTag(this)">All</div>
+        <div class="portfolio-filter-item" data-tags="web" onclick="addClass(this), filterByTag(this)">Web Design</div>
+        <div class="portfolio-filter-item" data-tags="graphic" onclick="addClass(this), filterByTag(this)">Graphic
+          Design</div>
+        <div class="portfolio-filter-item" data-tags="artwork" onclick="addClass(this), filterByTag(this)">Artwork</div>
+      </div>
+      <div class="portfolio-list">
+        <div class="portfolio-item" data-id="1" data-tags="all graphic"></div>
+        <div class="portfolio-item" data-id="2" data-tags="all graphic"></div>
+        <div class="portfolio-item" data-id="3" data-tags="all graphic"></div>
+        <div class="portfolio-item" data-id="4" data-tags="all graphic"></div>
+        <div class="portfolio-item" data-id="5" data-tags="all artwork"></div>
+        <div class="portfolio-item" data-id="6" data-tags="all artwork"></div>
+        <div class="portfolio-item" data-id="7" data-tags="all artwork"></div>
+        <div class="portfolio-item" data-id="8" data-tags="all web"></div>
+        <div class="portfolio-item" data-id="9" data-tags="all web"></div>
+        <div class="portfolio-item" data-id="10" data-tags="all web"></div>
+        <div class="portfolio-item" data-id="11" data-tags="all web"></div>
+        <div class="portfolio-item" data-id="12" data-tags="all web"></div>
+
+        <!-- if items more than 12 -->
+        <div class="portfolio-item" data-id="10" data-tags="all web"></div>
+        <div class="portfolio-item" data-id="11" data-tags="all web"></div>
+        <div class="portfolio-item" data-id="12" data-tags="all web"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="about-us">
+    <div class="container">
+      <h1 class="section-title">About Us</h1>
+      <p class="section-text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
+        commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus
+        commodo, tortor mauris condimentum nibh.
+      </p>
+      <div class="team-list">
+        <div class="team-item" data-id="1">
+          <div class="team-image" data-id="1"></div>
+          <h4 class="team-name">Adam Jensen</h4>
+          <p class="team-text">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus
+            dolor id lorem.
+          </p>
+          <ul class="team-social-list">
+            <li class="team-social-item icon-fb"></li>
+            <li class="team-social-item icon-gp"></li>
+            <li class="team-social-item icon-tw"></li>
+            <li class="team-social-item icon-li"></li>
+          </ul>
+        </div>
+        <div class="team-item" data-id="2">
+          <div class="team-image" data-id="2"></div>
+          <h4 class="team-name">Desmond Miles</h4>
+          <p class="team-text">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus
+            ut, ultrices velit.
+          </p>
+          <ul class="team-social-list">
+            <li class="team-social-item icon-fb"></li>
+            <li class="team-social-item icon-gp"></li>
+            <li class="team-social-item icon-tw"></li>
+            <li class="team-social-item icon-li"></li>
+          </ul>
+        </div>
+        <div class="team-item" data-id="3">
+          <div class="team-image" data-id="3"></div>
+          <h4 class="team-name">Scolara Visari</h4>
+          <p class="team-text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
+            Quisque condimentum.
+          </p>
+          <ul class="team-social-list">
+            <li class="team-social-item icon-fb"></li>
+            <li class="team-social-item icon-gp"></li>
+            <li class="team-social-item icon-tw"></li>
+            <li class="team-social-item icon-li"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const filterItems = document.querySelectorAll('.portfolio-filter-item')
+    const portfolioItems = document.querySelectorAll('.portfolio-item')
+
+    function addClass(item) {
+      for (i = 0; i < filterItems.length; i++) {
+        filterItems[i].classList.remove('active')
+      }
+      item.classList.add('active');
+    }
+
+    function filterByTag(item) {
+      const tag = item.getAttribute('data-tags')
+      console.log(tag)
+      for (i = 0; i < portfolioItems.length; i++) {
+        if (!portfolioItems[i].getAttribute('data-tags').includes(tag)) {
+          console.log(portfolioItems[i])
+          portfolioItems[i].setAttribute('hidden', 'hidden')
+        } else {
+          portfolioItems[i].removeAttribute('hidden')
+        }
+
+      }
+
+    }
+  </script>
+</body>
+
+</html>
