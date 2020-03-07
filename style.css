@@ -280,6 +280,9 @@ header .nav .menu-list .menu-item:first-child:before {
   line-height: 1.85;
   color: var(--title-color);
   text-align: justify;
+  display: inline-block;
+  max-height: 67px;
+  overflow: hidden;
 }
 
 /* section portfolio */
