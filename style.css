@@ -277,7 +277,7 @@ header .nav .menu-list .menu-item:first-child:before {
 
 .services .service-list .service-item .content-text {
   font-size: 12px;
-  line-height: 1.9;
+  line-height: 1.85;
   color: var(--title-color);
   text-align: justify;
 }
@@ -609,7 +609,7 @@ header .nav .menu-list .menu-item:first-child:before {
 .get-quote .contacts .contacts-wrap .contact-text {
   text-align: justify;
   margin: 0;
-  line-height: 1.85;
+  line-height: 1.78;
 }
 
 .get-quote .contacts .contacts-wrap .contact-list {
