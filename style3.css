@@ -128,6 +128,14 @@ body {
   border-radius: 2px;
   background-color: #d6564f;
   color: #f0d8d9;
+  cursor: pointer;
+  outline: none;
+  transition: all .2s ease-in-out;
+}
+
+.get-quote .contacts .form-wrap .submit-btn:hover {
+  color: #fff;
+  background-color: #cc4d46;
 }
 
 .get-quote .contacts .contacts-wrap {
@@ -157,15 +165,23 @@ body {
 }
 
 .get-quote .contacts .contacts-wrap .contact-info {
+  width: fit-content;
   text-decoration: none;
   color: inherit;
   margin-bottom: 6px;
   padding-left: 23px;
   position: relative;
+  transition: all .2s ease-in-out;
 }
 
 .get-quote .contacts .contacts-wrap .contact-info.email {
   margin-top: 1px;
+}
+
+.get-quote .contacts .contacts-wrap .contact-info.phone:hover,
+.get-quote .contacts .contacts-wrap .contact-info.email:hover {
+  text-decoration: underline;
+  color: #ffffff;
 }
 
 .get-quote .contacts .contacts-wrap .contact-info.location::before,
