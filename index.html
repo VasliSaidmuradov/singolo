@@ -17,26 +17,37 @@
           <span class="logo-asterisk">*</span>
         </div>
         <nav class="nav">
-          <ul class="menu-list">
-            <li class="menu-item">Home</li>
-            <li class="menu-item">Services</li>
-            <li class="menu-item">Portfolio</li>
-            <li class="menu-item">About</li>
-            <li class="menu-item">Contact</li>
+          <ul id="menu" class="menu-list">
+            <li class="menu-item"><a class="active" href="#">Home</a></li>
+            <li class="menu-item"><a href="#services">Services</a></li>
+            <li class="menu-item"><a href="#portfolio">Portfolio</a></li>
+            <li class="menu-item"><a href="#about">About</a></li>
+            <li class="menu-item"><a href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
     </div>
   </header>
-  <section class="slider">
-    <div class="container">
-      <img class="slider-image slider-image-vertical" src="./assets/img/iPhone-vertical.png" alt="iPhone">
-      <img class="slider-image slider-image-horizontal" src="./assets/img/iPhone-horizontal.png" alt="iPhone">
-      <div class="slider-prev"></div>
-      <div class="slider-next"></div>
+  <section id="slider" class="slider">
+    <div class="container slider-wrap">
+      <div class="slide slide1">
+        <img class="slider-image slider-image-vertical" src="./assets/img/iPhone-vertical.png" alt="iPhone">
+        <img class="slider-image slider-image-horizontal" src="./assets/img/iPhone-horizontal.png" alt="iPhone">
+        <div class="turn-off-1"></div>
+        <div class="turn-off-2"></div>
+        <div class="turn1"></div>
+        <div class="turn2"></div>
+      </div>
+      <div class="slide slide2">
+        <img src="./assets/slider2.svg" alt="slider2">
+      </div>
+
+      <div class="slider-prev" onclick="swipeSlide(-1)"></div>
+      <div class="slider-next" onclick="swipeSlide(1)"></div>
     </div>
+
   </section>
-  <section class="services">
+  <section id="services" class="services">
     <div class="container">
       <h1 class="section-title">Our Services</h1>
       <p class="section-text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
@@ -131,41 +142,45 @@
       </div>
     </div>
   </section>
-  <section class="portfolio">
+  <section id="portfolio" class="portfolio">
     <div class="container">
       <h1 class="section-title">Portfolio</h1>
       <p class="section-text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
         elit.
       </p>
       <div class="portfolio-filter">
-        <div class="portfolio-filter-item active" data-tags="all" onclick="addClass(this), filterByTag(this)">All</div>
-        <div class="portfolio-filter-item" data-tags="web" onclick="addClass(this), filterByTag(this)">Web Design</div>
-        <div class="portfolio-filter-item" data-tags="graphic" onclick="addClass(this), filterByTag(this)">Graphic
+        <div class="portfolio-filter-item active" data-tags="all">
+          All</div>
+        <div class="portfolio-filter-item" data-tags="web">Web
           Design</div>
-        <div class="portfolio-filter-item" data-tags="artwork" onclick="addClass(this), filterByTag(this)">Artwork</div>
+        <div class="portfolio-filter-item" data-tags="graphic">
+          Graphic
+          Design</div>
+        <div class="portfolio-filter-item" data-tags="artwork">
+          Artwork</div>
       </div>
       <div class="portfolio-list">
-        <div class="portfolio-item" data-id="1" data-tags="all graphic"></div>
-        <div class="portfolio-item" data-id="2" data-tags="all graphic"></div>
-        <div class="portfolio-item" data-id="3" data-tags="all graphic"></div>
-        <div class="portfolio-item" data-id="4" data-tags="all graphic"></div>
-        <div class="portfolio-item" data-id="5" data-tags="all artwork"></div>
-        <div class="portfolio-item" data-id="6" data-tags="all artwork"></div>
-        <div class="portfolio-item" data-id="7" data-tags="all artwork"></div>
-        <div class="portfolio-item" data-id="8" data-tags="all web"></div>
-        <div class="portfolio-item" data-id="9" data-tags="all web"></div>
-        <div class="portfolio-item" data-id="10" data-tags="all web"></div>
-        <div class="portfolio-item" data-id="11" data-tags="all web"></div>
-        <div class="portfolio-item" data-id="12" data-tags="all web"></div>
+        <div class="portfolio-item 1" data-id="1" data-tags="all graphic"></div>
+        <div class="portfolio-item 2" data-id="2" data-tags="all graphic"></div>
+        <div class="portfolio-item 3" data-id="3" data-tags="all graphic"></div>
+        <div class="portfolio-item 4" data-id="4" data-tags="all graphic"></div>
+        <div class="portfolio-item 5" data-id="5" data-tags="all artwork"></div>
+        <div class="portfolio-item 6" data-id="6" data-tags="all artwork"></div>
+        <div class="portfolio-item 7" data-id="7" data-tags="all artwork"></div>
+        <div class="portfolio-item 8" data-id="8" data-tags="all web"></div>
+        <div class="portfolio-item 9" data-id="9" data-tags="all web"></div>
+        <div class="portfolio-item 10" data-id="10" data-tags="all web"></div>
+        <div class="portfolio-item 11" data-id="11" data-tags="all web"></div>
+        <div class="portfolio-item 12" data-id="12" data-tags="all web"></div>
 
         <!-- if items more than 12 -->
-        <div class="portfolio-item" data-id="10" data-tags="all web"></div>
-        <div class="portfolio-item" data-id="11" data-tags="all web"></div>
-        <div class="portfolio-item" data-id="12" data-tags="all web"></div>
+        <!-- <div class="portfolio-item 13" data-id="1" data-tags="all web"></div>
+        <div class="portfolio-item 14" data-id="2" data-tags="all web"></div>
+        <div class="portfolio-item 15" data-id="3" data-tags="all web"></div> -->
       </div>
     </div>
   </section>
-  <section class="about-us">
+  <section id="about" class="about-us">
     <div class="container">
       <h1 class="section-title">About Us</h1>
       <p class="section-text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
@@ -215,7 +230,7 @@
       </div>
     </div>
   </section>
-  <section class="get-quote">
+  <section id="contact" class="get-quote">
     <div class="container">
       <h2 class="section-title">Get a Quote</h2>
       <p class="section-text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
@@ -224,12 +239,13 @@
       </p>
       <div class="contacts">
         <div class="form-wrap">
-          <form>
+          <form action="">
             <input type="text" class="form-input" id="inputName" placeholder="Name (Required)" required>
             <input type="email" class="form-input" id="inputEmail" placeholder="Email (Required)" required>
-            <input type="text" class="form-input" id="InputSubject" placeholder="Subject">
-            <textarea class="form-textarea" id="textarea" placeholder="Describe your project in detail..."></textarea>
-            <button type="submit" class="submit-btn">Submit</button>
+            <input type="text" class="form-input" id="inputSubject" placeholder="Subject">
+            <textarea class="form-textarea" id="description"
+              placeholder="Describe your project in detail..."></textarea>
+            <button type="button" class="submit-btn">Submit</button>
           </form>
         </div>
         <div class="contacts-wrap">
@@ -261,32 +277,15 @@
     </div>
   </footer>
 
-  <script>
-    const filterItems = document.querySelectorAll('.portfolio-filter-item')
-    const portfolioItems = document.querySelectorAll('.portfolio-item')
-
-    function addClass(item) {
-      for (i = 0; i < filterItems.length; i++) {
-        filterItems[i].classList.remove('active')
-      }
-      item.classList.add('active');
-    }
-
-    function filterByTag(item) {
-      const tag = item.getAttribute('data-tags')
-      console.log(tag)
-      for (i = 0; i < portfolioItems.length; i++) {
-        if (!portfolioItems[i].getAttribute('data-tags').includes(tag)) {
-          console.log(portfolioItems[i])
-          portfolioItems[i].setAttribute('hidden', 'hidden')
-        } else {
-          portfolioItems[i].removeAttribute('hidden')
-        }
-
-      }
-
-    }
-  </script>
+  <!-- modal window -->
+  <div id="submit-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-subject"></div>
+      <div class="modal-description"></div>
+      <button id="close-submit-modal">OK</button>
+    </div>
+  </div>
+  <script src="./script.js"></script>
 </body>
 
 </html>
