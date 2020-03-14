@@ -235,7 +235,7 @@ header .nav .menu-list .menu-item:first-child:before {
 .slider .slide1 .turn-off-1 {
   position: absolute;
   top: 114px;
-  left: 82px;
+  left: 123px;
   width: 193px;
   height: 339px;
   background-color: #333;
@@ -248,7 +248,7 @@ header .nav .menu-list .menu-item:first-child:before {
 .slider .slide1 .turn-off-2 {
   position: absolute;
   top: 185px;
-  left: 523px;
+  left: 482px;
   width: 339px;
   height: 193px;
   background-color: #333;
@@ -264,12 +264,12 @@ header .nav .menu-list .menu-item:first-child:before {
 
 .slider-image-vertical {
   top: 53px;
-  left: 71px;
+  left: 112px;
 }
 
 .slider-image-horizontal {
   top: 174px;
-  right: 70px;
+  right: 111px;
 }
 
 .slider .container .slider-prev,
@@ -311,15 +311,15 @@ header .nav .menu-list .menu-item:first-child:before {
 .turn1 {
   width: 216px;
   height: 458px;
-  top: 53px;
-  left: 70px;
+  top: 52px;
+  left: 111px;
 }
 
 .turn2 {
   width: 458px;
   height: 216px;
   top: 173px;
-  left: 465px;
+  left: 424px;
 }
 
 .opacity-1 {
@@ -470,12 +470,13 @@ header .nav .menu-list .menu-item:first-child:before {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 19.333px;
-  margin-top: 20px;
-  max-height: 600px;
+  margin-top: 15px;
+  max-height: 610px;
   width: 948px;
   overflow: hidden;
   padding: 5px;
   margin-left: -5px;
+  box-sizing: border-box;
 }
 
 .portfolio .portfolio-item {
@@ -822,11 +823,13 @@ footer .footer {
 
 footer .copyright {
   color: inherit;
+  margin-top: -9px;
 }
 
 footer .footer-social-list {
   display: flex;
   list-style: none;
+  margin-top: -7px;
 }
 
 footer .footer-social-item {
@@ -857,6 +860,7 @@ footer .footer-social-item:hover {
   z-index: 20;
   font-family: Lato;
 }
+
 .modal * {
   box-sizing: border-box;
 }
