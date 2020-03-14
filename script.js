@@ -80,6 +80,7 @@ phone2.addEventListener('click', e => {
 
 // slider block
 {
+  /*
   const slider = document.getElementById('slider')
   let sliderStyles = getComputedStyle(slider)
 
@@ -116,7 +117,66 @@ phone2.addEventListener('click', e => {
     }
     slides[slideIndex - 1].style.cssText = "opacity: 1;"
   }
+  */
 }
+{
+  const slider = document.getElementById('slider')
+  const sliderWrap = slider.querySelector('.slider-wrap')
+  const slideItems = sliderWrap.querySelectorAll('.slide')
+
+  const prevBtn = sliderWrap.querySelector('.slider-prev')
+  const nextBtn = sliderWrap.querySelector('.slider-next')
+
+  let currentItem = 0
+  let isEnabled = true
+
+  function changeCurrentItem(n) {
+    currentItem = (n + slideItems.length) % slideItems.length
+  }
+
+  function showItem(direction) {
+    slideItems[currentItem].classList.add('next', direction)
+    slideItems[currentItem].addEventListener('animationend', function () {
+      this.classList.remove('next', direction)
+      this.classList.add('active')
+      isEnabled = true
+    })
+  }
+
+  function hideItem(direction) {
+    isEnabled = false
+    slideItems[currentItem].classList.add(direction)
+    slideItems[currentItem].addEventListener('animationend', function () {
+      this.classList.remove('active', direction)
+    })
+  }
+
+  function prevItem(n) {
+    hideItem('to-right')
+    changeCurrentItem(n - 1)
+    showItem('from-left')
+  }
+
+  function nextItem(n) {
+    hideItem('to-left')
+    changeCurrentItem(n + 1)
+    showItem('from-right')
+  }
+
+  prevBtn.addEventListener('click', () => {
+    if (isEnabled) {
+      prevItem(currentItem)
+    }
+  })
+
+  nextBtn.addEventListener('click', () => {
+    if (isEnabled) {
+      nextItem(currentItem)
+    }
+  })
+}
+// slider block end
+
 
 
 // submit form
