@@ -896,7 +896,7 @@ footer .footer-social-item:hover {
 .modal .modal-subject {
   text-overflow: ellipsis;
   overflow: hidden;
-  max-width: 510px;
+  /* max-width: 510px; */
   white-space: nowrap;
   padding-right: 30px;
   margin-bottom: 8px;
