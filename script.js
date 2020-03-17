@@ -15,16 +15,28 @@ function addClass(item, className) {
 function removeClass(item, className) {
   item.classList.remove(className)
 }
+function scrollTo(id) {
+  document.getElementById(`${id}`).scrollIntoView({
+    behavior: 'smooth'
+  })
+}
 
 menu.addEventListener('click', e => {
   menuItems.forEach(el => removeClass(el, 'active'))
   addClass(e.target, 'active')
+  scrollTo(e.target.getAttribute('data-id'))
 })
 
+// portfolioNav.addEventListener('click', e => {
+//   portfolioNavItems.forEach(el => removeClass(el, 'active'))
+//   addClass(e.target, 'active')
+//   changeArrayItemsPosition(portfolioItems)
+// })
+
 portfolioNav.addEventListener('click', e => {
-  portfolioNavItems.forEach(el => removeClass(el, 'active'))
-  addClass(e.target, 'active')
-  changeArrayItemsPosition(portfolioItems)
+  for (let i = portfolioList.children.length; i >= 0; i--) {
+    portfolioList.appendChild(portfolioList.children[Math.random() * i | 0]);
+  }
 })
 
 portfolioList.addEventListener('click', e => {
@@ -222,10 +234,14 @@ phone2.addEventListener('click', e => {
 
   function closeModal(modalId, content) {
     const modal = document.getElementById(modalId)
+
+    name.value = ''
+    email.value = ''
     subject.value = ''
     subjectVal = ''
     desc.value = ''
     descVal = ''
+
     clearInfo()
     modal.style.display = 'none'
   }
