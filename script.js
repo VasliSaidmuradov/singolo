@@ -34,6 +34,8 @@ menu.addEventListener('click', e => {
 // })
 
 portfolioNav.addEventListener('click', e => {
+  portfolioNavItems.forEach(el => removeClass(el, 'active'))
+  addClass(e.target, 'active')
   for (let i = portfolioList.children.length; i >= 0; i--) {
     portfolioList.appendChild(portfolioList.children[Math.random() * i | 0]);
   }
@@ -43,6 +45,47 @@ portfolioList.addEventListener('click', e => {
   portfolioItems.forEach(el => removeClass(el, 'selected'))
   addClass(e.target, 'selected')
 })
+
+// detect elem = isInViewport
+{
+  const slider = document.getElementById('slider')
+  const services = document.getElementById('services')
+  const portfolio = document.getElementById('portfolio')
+  const about = document.getElementById('about')
+  const contact = document.getElementById('contact')
+
+  const isInViewport = function (elem) {
+    const bounding = elem.getBoundingClientRect()
+    // console.log(bounding)
+    return (bounding.top >= -bounding.height / 2 && bounding.top <= bounding.height / 2)
+  }
+
+  window.addEventListener('scroll', () => {
+    const removeAndAdd = elemId => {
+      menuItems.forEach(el => removeClass(el, 'active'))
+      addClass(menu.querySelector(`a[data-id=${elemId}]`), 'active')
+    }
+    if (isInViewport(slider)) {
+      removeAndAdd("slider")
+    }
+    if (isInViewport(services) && !isInViewport(slider)) {
+      removeAndAdd("services")
+    }
+    if (isInViewport(portfolio) && !isInViewport(services)) {
+      removeAndAdd("portfolio")
+    }
+    if (isInViewport(about) && !isInViewport(portfolio)) {
+      removeAndAdd("about")
+    }
+    if (isInViewport(contact) && !isInViewport(about)) {
+      removeAndAdd("contact")
+    }
+  }, false)
+}
+
+
+// detect elem = isInViewport
+
 
 function getRandomDataId(items) {
   return Math.floor(Math.random() * items + 1)
