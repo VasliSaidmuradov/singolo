@@ -927,3 +927,193 @@ footer {
   margin: 0 auto;
   scroll-margin-top: 89px;
 }
+
+/* ============================== */
+
+
+@media (min-width:768px) and (max-width: 1019px) {
+
+  header,
+  #slider,
+  #services,
+  #portfolio,
+  #about,
+  #contact,
+  footer {
+    width: 100%;
+  }
+
+  .container {
+    width: calc(100% - 80px);
+    margin: 0 auto;
+  }
+
+  .slider {
+    height: 448px;
+  }
+
+  .slider-image-vertical {
+    width: 181px;
+    top: 41px;
+    left: 92px;
+  }
+
+  .slider-image-horizontal {
+    width: 364px;
+    top: 144px;
+    right: 85px;
+  }
+
+  .slider .container .slider-prev,
+  .slider .container .slider-next {
+    top: 211px;
+  }
+
+  .slider .container .slider-prev {
+    left: 29px;
+  }
+
+  .slider .container .slider-next {
+    right: 29px;
+  }
+
+  .slider .slide1 .turn-off-1 {
+    top: 88px;
+    left: 100px;
+    width: 146px;
+    height: 255px;
+  }
+
+  .slider .slide1 .turn-off-2 {
+    position: absolute;
+    top: 152px;
+    left: 360px;
+    width: 257px;
+    height: 146px;
+  }
+
+  .turn1 {
+    width: 162px;
+    height: 346px;
+    top: 40px;
+    left: 92px;
+    border-radius: 20px;
+  }
+
+  .turn2 {
+    width: 343px;
+    height: 162px;
+    top: 143px;
+    left: 319px;
+    border-radius: 20px;
+  }
+
+  .slider .slide2 img {
+    width: 100%;
+  }
+
+
+
+  .services {
+    height: auto;
+  }
+
+  .services .service-list .service-item {
+    width: 50%;
+    height: 142px;
+    padding-left: 0 !important;
+    padding-right: 53px;
+  }
+
+
+
+  .portfolio {
+    height: auto;
+  }
+
+  .portfolio .portfolio-list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 19.5px;
+    max-height: 805px;
+    width: calc(100% + 10px);
+    margin-bottom: 50px;
+  }
+
+  .portfolio .portfolio-item {
+    /* width: 216px; */
+    width: 100%;
+    height: 183px;
+  }
+
+
+
+  .about-us {
+    height: auto;
+  }
+
+  .about-us .team-list {
+    grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px, 1fr);
+    grid-gap: 15px;
+    padding-bottom: 50px;
+  }
+
+  .about-us .team-item .team-image {
+    /* width: 219px; */
+    width: 100%;
+    height: 219px;
+  }
+  .about-us .team-item .team-name {
+    width: 220px;
+  }
+
+
+
+  .get-quote {
+    height: 610px;
+  }
+
+  .get-quote .contacts .form-wrap .form-input {
+    width: 97.5%;
+  }
+
+  .get-quote .contacts .form-wrap .form-textarea {
+    width: 97.5%;
+    height: 159px;
+  }
+
+  .get-quote .contacts .form-wrap .submit-btn {
+    padding: 0;
+    width: 136px;
+    height: 38px;
+    border-radius: 5px;
+    background-color: #FBC65F;
+    font-weight: bold;
+    color: #886A30;
+    text-transform: uppercase;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:375px) and (max-width: 767px) {
+  header {
+    background-color: orange;
+  }
+}
+
+@media (max-width: 374px) {
+  header {
+    background-color: blue;
+  }
+}
+
+/* ============================== */
