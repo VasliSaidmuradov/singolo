@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Singolo</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,11 +13,11 @@
   <header>
     <div class="container">
       <div class="header">
-        <div class="logo">
+        <div class="logo logo-mobile">
           <span class="logo-text">Singolo</span>
           <span class="logo-asterisk">*</span>
         </div>
-        <nav class="nav">
+        <nav class="nav nav-mobile">
           <ul id="menu" class="menu-list">
             <li class="menu-item"><a class="active" data-id="slider">Home</a></li>
             <li class="menu-item"><a data-id="services">Services</a></li>
@@ -26,7 +27,7 @@
           </ul>
         </nav>
         
-        <div class="hamburger">
+        <div class="hamburger" ontoggle="tog()">
           <div class="hamburger-box">
             <div class="hamburger-inner"></div>
           </div>

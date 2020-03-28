@@ -21,11 +21,31 @@ function scrollTo(id) {
   })
 }
 
-menu.addEventListener('click', e => {
-  menuItems.forEach(el => removeClass(el, 'active'))
-  addClass(e.target, 'active')
-  scrollTo(e.target.getAttribute('data-id'))
-})
+{
+  // Menu & Hamburger menu
+  const hamburger = document.querySelector('.hamburger')
+  const nav = document.querySelector('.nav-mobile')
+  const logo = document.querySelector('.logo-mobile')
+
+  function toggleMobileMenu() {
+    hamburger.classList.toggle('is-rotate')
+    nav.classList.toggle('open')
+    logo.classList.toggle('open')
+  }
+
+  menu.addEventListener('click', e => {
+    menuItems.forEach(el => removeClass(el, 'active'))
+    addClass(e.target, 'active')
+    scrollTo(e.target.getAttribute('data-id'))
+    if (window.innerWidth < 768) {
+      toggleMobileMenu()
+    }
+  })
+
+  hamburger.addEventListener('click', e => {
+    toggleMobileMenu()
+  })
+}
 
 // portfolioNav.addEventListener('click', e => {
 //   portfolioNavItems.forEach(el => removeClass(el, 'active'))
@@ -279,7 +299,9 @@ phone2.addEventListener('click', e => {
     const modal = document.getElementById(modalId)
 
     name.value = ''
+    nameVal = ''
     email.value = ''
+    emailVal = ''
     subject.value = ''
     subjectVal = ''
     desc.value = ''
