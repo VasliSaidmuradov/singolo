@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Singolo</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,19 +13,25 @@
   <header>
     <div class="container">
       <div class="header">
-        <div class="logo">
+        <div class="logo logo-mobile">
           <span class="logo-text">Singolo</span>
           <span class="logo-asterisk">*</span>
         </div>
-        <nav class="nav">
+        <nav class="nav nav-mobile">
           <ul id="menu" class="menu-list">
             <li class="menu-item"><a class="active" data-id="slider">Home</a></li>
-            <li class="menu-item"><a  data-id="services">Services</a></li>
+            <li class="menu-item"><a data-id="services">Services</a></li>
             <li class="menu-item"><a data-id="portfolio">Portfolio</a></li>
             <li class="menu-item"><a data-id="about">About</a></li>
             <li class="menu-item"><a data-id="contact">Contact</a></li>
           </ul>
         </nav>
+        
+        <div class="hamburger" ontoggle="tog()">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -39,7 +46,7 @@
         <div class="turn2"></div>
       </div>
       <div class="slide slide2">
-        <img src="./assets/slider2.svg" alt="slider2">
+        <img class="slide2-image" src="./assets/slider2.svg" alt="slider2">
       </div>
 
       <div class="slider-prev"></div>
@@ -245,7 +252,7 @@
             <input type="text" class="form-input" id="inputSubject" placeholder="Subject">
             <textarea class="form-textarea" id="description"
               placeholder="Describe your project in detail..."></textarea>
-            <button type="button" class="submit-btn">Submit</button>
+            <button type="button" class="submit-btn">Send</button>
           </form>
         </div>
         <div class="contacts-wrap">
@@ -266,7 +273,7 @@
   <footer>
     <div class="container">
       <div class="footer">
-        <span class="copyright">&copy; Copyright 2013 · by PSDchat.com</span>
+        <span class="copyright">&copy; Copyright 2013</span>
         <ul class="footer-social-list">
           <li class="footer-social-item icon-fb"></li>
           <li class="footer-social-item icon-gp"></li>
